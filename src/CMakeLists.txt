@@ -4,7 +4,8 @@ add_executable(text-adventure)
 set_property(TARGET text-adventure PROPERTY CXX_STANDARD 17)
 
 # Include all subdirectories
-#add_subdirectory()
+add_subdirectory(Content)
+add_subdirectory(Delivery)
 
 # Add main source file
 target_sources(text-adventure

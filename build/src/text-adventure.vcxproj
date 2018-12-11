@@ -317,6 +317,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="C:\Users\nicka\Documents\Projects\text-adventure\src\Content\Story.cpp" />
+    <ClInclude Include="C:\Users\nicka\Documents\Projects\text-adventure\src\Content\Story.hpp" />
+    <ClCompile Include="C:\Users\nicka\Documents\Projects\text-adventure\src\Delivery\Storyteller.cpp" />
+    <ClInclude Include="C:\Users\nicka\Documents\Projects\text-adventure\src\Delivery\Storyteller.hpp" />
     <ClCompile Include="C:\Users\nicka\Documents\Projects\text-adventure\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
