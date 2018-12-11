@@ -1,0 +1,3 @@
+C:/Users/nicka/Documents/Projects/text-adventure/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/nicka/Documents/Projects/text-adventure/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/nicka/Documents/Projects/text-adventure/build/src/CMakeFiles/text-adventure.dir

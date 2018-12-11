@@ -1,12 +1,11 @@
-// TextAdventure.cpp : Defines the entry point for the console application.
-//
+#ifdef _MSC_VER
+#  pragma comment(linker, "/SUBSYSTEM:CONSOLE")
+#endif
 
-#include "stdafx.h"
-
+#include <cstdlib>
 #include <chrono>
 #include <iostream>
 #include <thread>
-
 
 void cr()
 {
@@ -20,6 +19,17 @@ void pr(std::string text)
     std::this_thread::sleep_for(std::chrono::milliseconds(75));
     std::cout << c;
   }
+  std::cout << '\n';
+}
+
+void clear()
+{
+#ifdef _WIN64 || _WIN32
+  std::system("cls");
+#else
+  // Assume POSIX
+  std::system ("clear");
+#endif
 }
 
 int main()
@@ -32,23 +42,22 @@ int main()
     std::cout << "Tales From Afyr";
 
     std::this_thread::sleep_for(std::chrono::seconds(3));
-    
+
     cr();
 
-    pr("Corth knew he didn't have much time.\n");
-    pr("Glancing around cautiously at the massive fyr trees,\n");
-    pr("he shouldered his pack and trudged on. Beams of \n");
-    pr("moonlight penetrated the canopy overhead, illuminating\n");
-    pr("the rigid carpet of gnarled roots under his feet. The wide\n");
-    pr("trunks of the fyr trees formed a protective cloak that\n");
-    pr("hid him from the hawk - eyed gaze of his pursuers while\n");
-    pr("all around, the forest floor rose and fell in gentle slopes\n");
-    pr("that offered the illusion of safety - a promise Corth knew\n");
+    pr("Corth knew he didn't have much time.");
+    pr("Glancing around cautiously at the massive fyr trees,");
+    pr("he shouldered his pack and trudged on. Beams of");
+    pr("moonlight penetrated the canopy overhead, illuminating");
+    pr("the rigid carpet of gnarled roots under his feet. The wide");
+    pr("trunks of the fyr trees formed a protective cloak that");
+    pr("hid him from the hawk - eyed gaze of his pursuers while");
+    pr("all around, the forest floor rose and fell in gentle slopes");
+    pr("that offered the illusion of safety - a promise Corth knew");
     pr("to be a lie.");
 
-
     std::this_thread::sleep_for(std::chrono::seconds(10));
-    system("CLS");
+    clear();
 
   }
 
